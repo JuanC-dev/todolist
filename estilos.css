@@ -1,0 +1,184 @@
+/** Estilos generales */
+:root {
+  --color-1: #770b7a;
+  --color-2: #c94cce;
+  --color-3: #b70dbd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: var(--color-2);
+}
+
+/** Estilos del header */
+.header__title {
+  background-color: var(--color-1);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 0;
+  color: #fff;
+}
+
+.header__info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 30px 20%;
+}
+
+.header__info > p {
+  background-color: var(--color-1);
+  border-radius: 5px;
+  text-align: center;
+  padding: 6px 20px;
+  color: #fff;
+}
+
+/** Estilos del contenido */
+.contenido {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 30px;
+  align-items: start;
+  padding: 10px 5%;
+}
+
+/** Estilos del formulario  */
+.contenido__formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+  background-color: var(--color-1);
+  border-radius: 5px;
+}
+
+.contenido__formulario > h3 {
+  text-align: center;
+  font-style: italic;
+  color: #fff;
+}
+
+.contenido__formulario > input[type="text"] {
+  border: none;
+  padding: 8px;
+  border: 3px solid transparent;
+  border-radius: 5px;
+}
+
+.contenido__formulario > input[type="text"]:focus {
+  outline: none;
+  border-color: var(--color-2);
+}
+
+.contenido__formulario > button[type="submit"] {
+  border: none;
+  padding: 10px 0;
+  background-color: var(--color-2);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.contenido__formulario > button[type="submit"]:hover {
+  font-style: italic;
+  background-color: var(--color-3);
+}
+
+/** Estilos de la lista  */
+.contenido__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--color-1);
+  border-radius: 5px;
+  min-height: 91px;
+  padding: 20px 15px;
+}
+
+.contenido__lista__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.contenido__lista__item > p {
+  padding: 5px 10px;
+  text-align: justify;
+  align-self: center;
+  font-weight: bold;
+}
+
+.contenido__lista__vacio {
+  font-weight: bold;
+  margin: auto;
+  color: #fff;
+}
+
+.lista__item--completado {
+  text-decoration: line-through;
+  color: var(--color-2);
+}
+
+/** Estilos de los botones  */
+.lista__item__botones { 
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lista__item__botones > button {
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  transition: transform ease 300ms;
+}
+
+.lista__item__botones > button:hover {
+  transform: scale(1.1);
+}
+
+.item__botones__accion {
+  background-color: #0e42d1;
+
+}
+
+.item__botones__eliminar {
+  background-color: #ee1a3d;
+}
+
+/** Estilos responsivos  */
+@media (max-width: 700px) {
+  .header__info {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .contenido {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .header__info {
+    gap: 0;
+    padding: 20px 0;
+    justify-content: space-evenly;
+  }
+
+  .contenido {
+    grid-template-columns: 1fr;
+  }
+}

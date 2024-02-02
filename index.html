@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Crea y administra tus tareas fácilmente. Organiza tu día de manera eficiente y nunca olvides una tarea importante.">
+    <meta name="keywords" content="to do list, tareas, organizador, lista de quehaceres, recordatorios">
+    <title>To Do List - Organizador de Tareas</title>
+
+    <!-- * Estilos -->
+    <link rel="stylesheet" href="estilos.css" />
+
+    <!-- * Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="header__title">Lista de Tareas</h1>
+
+      <div class="header__info">
+        <p id="info__total">
+          0 <br />
+          Tareas
+        </p>
+        <p id="info__completa">
+          0 <br />
+          Completas
+        </p>
+        <p id="info__incompleta">
+          0 <br />
+          Incompletas
+        </p>
+      </div>
+    </div>
+
+    <div class="contenido">
+      <form class="contenido__formulario" id="formulario" autocomplete="off">
+        <h3>Registro de Tareas</h3>
+        <input type="text" id="nuevo-item" />
+        <button type="submit">Registrar</button>
+      </form>
+
+      <div class="contenido__lista" id="lista"></div>
+    </div>
+
+    <script src="funciones.js"></script>
+  </body>
+</html>
